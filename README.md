@@ -3,32 +3,29 @@
 ## 프로젝트 소개 ✨
 **'감자(감성자극 일기장)는 '.**
 
-✅  Google Maps API 를 이용한 위치 조회, 장소 검색, 경로 조회 
+✅ 당신의 오늘 하루를 감자 일기장에 적는다면,
 
-✅  택시 기사와 사용자 간의 실시간 통신을 통한 호출, 응답, 탑승, 하차 알림
+✅ 감자가 당신이 오늘 어떤 기분이었는지를 알아주는,
 
-✅  매칭된 택시 기사와 사용자 간의 실시간 위치 공유
+✅ 이번 달은 기쁜지, 행복한지, 우울한지를 알려주는,
 
-✅  모바일 기반의 웹 서비스
+✅ 인공지능 기반의 안드로이드 어플리케이션 입니다.
 
-<br />
 
-## [🚨 배포 링크](url)
-
-<br />
+<br/>
 
 ## 🧬 서비스 구성도
 
 ![서비스구성도](url)
 
-### 📚 [WIKI](https://github.com/boostcamp-2020/Project09-C-Uber-Clone/wiki)
+<br />
 
-### 📝 [Issue List](https://docs.google.com/spreadsheets/d/1kpEvOOr6cCK0YKUocBkjjaVOwnI4LHFpKrRn-rYKC90/edit#gid=0)
+## [🎈 노션 링크](https://www.notion.so/2318a85a051e45f7a6eb1015c02c68a7)
 
-### 📌 [Road Map](https://docs.google.com/spreadsheets/d/1kpEvOOr6cCK0YKUocBkjjaVOwnI4LHFpKrRn-rYKC90/edit#gid=782776278)
+<br />
+
 
 ## Member
 
-| 조찬민🧑‍💻                                | 강구민🧑‍💻                             | 신기철🧑‍💻                            |
-| ————————————————————— | ———————————————————— | —————————————————— |
-| [@jochanmin](https://github.com/jochanmin) | [@9mean](https://github.com/9mean) | [@skck0226](https://github.com/skck0226) |
+| 조찬민🧑‍💻                                | 강구민🧑‍💻                             | 신기철🧑‍💻                            |</br>
+| [@jochanmin](https://github.com/jochanmin) | [@9mean](https://github.com/9mean)       　　| [@skck0226](https://github.com/skck0226) |
