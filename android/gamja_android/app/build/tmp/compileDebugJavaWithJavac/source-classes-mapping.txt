@@ -1,0 +1,2 @@
+com/example/gamja/BuildConfig.java
+ com.example.gamja.BuildConfig
