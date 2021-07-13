@@ -1,11 +1,10 @@
-package com.example.gamja.activity
+package com.example.gamja.view
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.gamja.UserApi
+import com.example.gamja.utils.UserApi
 import com.example.gamja.databinding.ActivityLoginBinding
 import com.kakao.sdk.user.UserApiClient
 
@@ -37,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
     fun loadUserNameData() {
-        userName=UserApi().loadUserNameData(this)
+        userName= UserApi().loadUserNameData(this)
     }
 
     private fun goNextActivity(name:String){

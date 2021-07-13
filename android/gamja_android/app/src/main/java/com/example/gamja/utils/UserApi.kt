@@ -1,4 +1,4 @@
-package com.example.gamja
+package com.example.gamja.utils
 
 import android.content.Context
 
