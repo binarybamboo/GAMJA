@@ -4,12 +4,20 @@
         "source": "C:\\Users\\kanggm\\Documents\\GAMJA\\android\\gamja_android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\kanggm\\Documents\\GAMJA\\android\\gamja_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_kakao_login_logo.png.flat",
+        "source": "C:\\Users\\kanggm\\Documents\\GAMJA\\android\\gamja_android\\app\\src\\main\\res\\drawable-v24\\kakao_login_logo.png"
+    },
+    {
         "merged": "C:\\Users\\kanggm\\Documents\\GAMJA\\android\\gamja_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gamja_logo.png.flat",
         "source": "C:\\Users\\kanggm\\Documents\\GAMJA\\android\\gamja_android\\app\\src\\main\\res\\drawable\\gamja_logo.png"
     },
     {
         "merged": "C:\\Users\\kanggm\\Documents\\GAMJA\\android\\gamja_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
         "source": "C:\\Users\\kanggm\\Documents\\GAMJA\\android\\gamja_android\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\kanggm\\Documents\\GAMJA\\android\\gamja_android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\kanggm\\Documents\\GAMJA\\android\\gamja_android\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\kanggm\\Documents\\GAMJA\\android\\gamja_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
