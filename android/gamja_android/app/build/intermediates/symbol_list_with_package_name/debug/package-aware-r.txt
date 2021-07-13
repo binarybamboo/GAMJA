@@ -1066,6 +1066,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gamja
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -1705,6 +1706,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable gamja_logo
+drawable gradient
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -1928,6 +1930,7 @@ id forever
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
+id go_main_btn
 id gone
 id graph
 id graph_wrap
@@ -1963,6 +1966,7 @@ id linear
 id listMode
 id list_item
 id login_btn
+id logout_btn
 id masked
 id material_clock_display
 id material_clock_face
@@ -2141,6 +2145,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -2172,6 +2177,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_name_text
 id view_offset_helper
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -2256,6 +2262,7 @@ layout activity_login
 layout activity_main
 layout activity_splash
 layout activity_talk_auth_code
+layout activity_user_name
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog

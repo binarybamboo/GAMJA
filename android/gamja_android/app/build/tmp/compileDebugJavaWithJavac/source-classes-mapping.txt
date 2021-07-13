@@ -8,3 +8,5 @@ com/example/gamja/databinding/ActivityLoginBinding.java
  com.example.gamja.databinding.ActivityLoginBinding
 com/example/gamja/BuildConfig.java
  com.example.gamja.BuildConfig
+com/example/gamja/databinding/ActivityUserNameBinding.java
+ com.example.gamja.databinding.ActivityUserNameBinding
