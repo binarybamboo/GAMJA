@@ -2,7 +2,7 @@ const Joi = require('joi');
 
 const register = {
   body: Joi.object().keys({
-    id: Joi.string().required().description('callback id querystring'),
+    email: Joi.string().required().description('callback email querystring'),
   }),
 };
 module.exports = {
