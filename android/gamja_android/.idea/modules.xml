@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gamja.iml" filepath="$PROJECT_DIR$/.idea/modules/gamja.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/gamja.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/gamja.app.iml" />
-    </modules>
-  </component>
-</project>

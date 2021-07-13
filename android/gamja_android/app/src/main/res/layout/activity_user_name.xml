@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.UserNameActivity">
+    tools:context=".view.UserNameActivity"
+    >
 
     <TextView
-
+        android:textColor="@color/black"
+        android:fontFamily="@font/font_style"
         android:id="@+id/textView"
         android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginTop="176dp"
         android:text="감자에게 이름을 지어주세요"
         android:textAlignment="center"
@@ -20,21 +22,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/user_name_text"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="12dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/font_style"
         android:hint="감자"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_weight="1">
+
+        <requestFocus />
+    </EditText>
 
     <Button
+        android:textColor="@color/gray"
+        android:fontFamily="@font/font_style"
         android:id="@+id/go_main_btn"
         android:background="@color/gamja"
         android:layout_width="match_parent"
