@@ -1,19 +1,18 @@
-package com.example.gamja.activity
+package com.example.gamja.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.example.gamja.R
-import com.example.gamja.activity.LoginActivity
-import com.example.gamja.activity.MainActivity
+import com.example.gamja.utils.UserApi
 import com.kakao.sdk.auth.AuthApiClient
 import com.kakao.sdk.common.model.KakaoSdkError
 import com.kakao.sdk.user.UserApiClient
 
 class SplashActivity : AppCompatActivity() {
     val SPLASH_VIEW_TIME: Long = 2000 //2초간 스플래시 화면을 보여줌 (ms)
-
+    lateinit var userName:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -35,8 +34,16 @@ class SplashActivity : AppCompatActivity() {
                 }
                 else {
                     //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
-                    startActivity(Intent(this, MainActivity::class.java))
-                    finish()
+                        userName=UserApi().loadUserNameData(this)
+                        if(userName!=""){
+                            startActivity(Intent(this, MainActivity::class.java))
+                            finish()
+                        }
+                        else{
+                            startActivity(Intent(this, UserNameActivity::class.java))
+                            finish()
+                        }
+
                 }
             }
         }

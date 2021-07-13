@@ -1067,6 +1067,7 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color gamja
+color gray
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -1752,6 +1753,8 @@ drawable notify_panel_notification_icon_bg
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font font_style
+font gamjafont
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1820,6 +1823,10 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_btn
+id add_diary_btn
+id add_diary_dialog_title
+id add_diary_title
 id alertTitle
 id aligned
 id all
@@ -1847,6 +1854,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id buttonPanel
 id cache_measures
+id cancel_btn
 id cancel_button
 id center
 id center_horizontal
@@ -2058,6 +2066,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id relativeLayout
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2146,6 +2155,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView2
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -2263,6 +2273,7 @@ layout activity_main
 layout activity_splash
 layout activity_talk_auth_code
 layout activity_user_name
+layout add_diary_dialog
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -2396,6 +2407,7 @@ string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+string main_text
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
