@@ -9,44 +9,117 @@
 8-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
 9-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml
-10
-11    <application
-11-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:5:5-22:19
-12        android:allowBackup="true"
-12-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:6:9-35
-13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.6.0] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\9dac8f2d3f885da11545ba42d8c04a39\core-1.6.0\AndroidManifest.xml:24:18-86
-14        android:debuggable="true"
-15        android:extractNativeLibs="false"
-16        android:icon="@mipmap/ic_launcher"
-16-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:7:9-43
-17        android:label="@string/app_name"
-17-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:8:9-41
-18        android:roundIcon="@mipmap/ic_launcher_round"
-18-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:9:9-54
-19        android:supportsRtl="true"
-19-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:10:9-35
-20        android:testOnly="true"
-21        android:theme="@style/Theme.Gamja" >
-21-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:11:9-43
-22        <activity android:name="com.example.gamja.SplashActivity" >
-22-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:12:9-18:20
-22-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:12:19-49
-23            <intent-filter>
-23-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:13:13-17:29
-24                <action android:name="android.intent.action.MAIN" />
-24-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:14:17-69
-24-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:14:25-66
-25
-26                <category android:name="android.intent.category.LAUNCHER" />
-26-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:17-77
-26-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:27-74
-27            </intent-filter>
-28        </activity>
-29        <activity android:name="com.example.gamja.MainActivity" >
-29-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:9-21:20
-29-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:19-47
-30        </activity>
-31    </application>
-32
-33</manifest>
+10    <!-- 인터넷 사용 권한 설정 -->
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <queries>
+13-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:11:5-19:15
+14        <package android:name="com.kakao.talk" />
+14-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:12:9-50
+14-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:12:18-47
+15        <package android:name="com.kakao.talk.alpha" />
+15-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:13:9-56
+15-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:13:18-53
+16        <package android:name="com.kakao.talk.sandbox" />
+16-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:14:9-58
+16-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:14:18-55
+17        <package android:name="com.kakao.onetalk" />
+17-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:15:9-53
+17-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:15:18-50
+18        <package android:name="com.android.chrome" />
+18-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:16:9-54
+18-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:16:18-51
+19        <package android:name="com.chrome.beta" />
+19-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:17:9-51
+19-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:17:18-48
+20        <package android:name="com.chrome.dev" />
+20-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:18:9-50
+20-->[com.kakao.sdk:v2-common:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\aa752bf3f5fcc1ba22cd3aa4a0d04a45\jetified-v2-common-2.5.2\AndroidManifest.xml:18:18-47
+21    </queries>
+22
+23    <application
+23-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:7:5-34:19
+24        android:name="com.example.gamja.GlobalApplication"
+24-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:8:9-42
+25        android:allowBackup="true"
+25-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:9:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.6.0] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\9dac8f2d3f885da11545ba42d8c04a39\core-1.6.0\AndroidManifest.xml:24:18-86
+27        android:debuggable="true"
+28        android:extractNativeLibs="false"
+29        android:icon="@mipmap/ic_launcher"
+29-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:10:9-43
+30        android:label="@string/app_name"
+30-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:11:9-41
+31        android:roundIcon="@mipmap/ic_launcher_round"
+31-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:12:9-54
+32        android:supportsRtl="true"
+32-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:13:9-35
+33        android:testOnly="true"
+34        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+34-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:14:9-65
+35        <activity android:name="com.example.gamja.LoginActivity" />
+35-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:15:9-60
+35-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:15:19-48
+36        <activity android:name="com.example.gamja.SplashActivity" >
+36-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:9-21:20
+36-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:19-49
+37            <intent-filter>
+37-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:17:13-20:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:18:17-69
+38-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:18:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:17-77
+40-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:27-74
+41            </intent-filter>
+42        </activity>
+43        <activity android:name="com.example.gamja.MainActivity" />
+43-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:22:9-59
+43-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:22:19-47
+44        <activity
+44-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:23:9-33:20
+45            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+45-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:23:19-76
+46            android:launchMode="singleTask"
+46-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:19:13-44
+47            android:theme="@style/TransparentCompat" >
+47-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:20:13-53
+48            <intent-filter>
+48-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:24:13-32:29
+49                <action android:name="android.intent.action.VIEW" />
+49-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:25:17-69
+49-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:25:25-66
+50
+51                <category android:name="android.intent.category.DEFAULT" />
+51-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:26:17-76
+51-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:26:27-73
+52                <category android:name="android.intent.category.BROWSABLE" />
+52-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:27:17-78
+52-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:27:27-75
+53
+54                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
+55                <data
+55-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:30:17-31:78
+56                    android:host="oauth"
+56-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:30:23-43
+57                    android:scheme="kakaoede31607a495852bc2303048e7ae2e37" />
+57-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:31:21-75
+58            </intent-filter>
+59        </activity>
+60        <activity
+60-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:12:9-16:56
+61            android:name="com.kakao.sdk.auth.TalkAuthCodeActivity"
+61-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:13:13-67
+62            android:exported="false"
+62-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:14:13-37
+63            android:launchMode="singleTask"
+63-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:15:13-44
+64            android:theme="@style/TransparentCompat" />
+64-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:16:13-53
+65    </application>
+66
+67</manifest>
