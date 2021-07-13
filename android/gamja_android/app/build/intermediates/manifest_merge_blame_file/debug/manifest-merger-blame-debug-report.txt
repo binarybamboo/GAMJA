@@ -40,7 +40,7 @@
 21    </queries>
 22
 23    <application
-23-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:7:5-34:19
+23-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:7:5-35:19
 24        android:name="com.example.gamja.GlobalApplication"
 24-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:8:9-42
 25        android:allowBackup="true"
@@ -60,54 +60,56 @@
 33        android:testOnly="true"
 34        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
 34-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:14:9-65
-35        <activity android:name="com.example.gamja.LoginActivity" />
-35-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:15:9-60
-35-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:15:19-48
-36        <activity android:name="com.example.gamja.SplashActivity" >
-36-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:9-21:20
-36-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:19-49
-37            <intent-filter>
-37-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:17:13-20:29
-38                <action android:name="android.intent.action.MAIN" />
-38-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:18:17-69
-38-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:18:25-66
-39
-40                <category android:name="android.intent.category.LAUNCHER" />
-40-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:17-77
-40-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:27-74
-41            </intent-filter>
-42        </activity>
-43        <activity android:name="com.example.gamja.MainActivity" />
-43-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:22:9-59
-43-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:22:19-47
-44        <activity
-44-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:23:9-33:20
-45            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
-45-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:23:19-76
-46            android:launchMode="singleTask"
-46-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:19:13-44
-47            android:theme="@style/TransparentCompat" >
-47-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:20:13-53
-48            <intent-filter>
-48-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:24:13-32:29
-49                <action android:name="android.intent.action.VIEW" />
-49-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:25:17-69
-49-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:25:25-66
-50
-51                <category android:name="android.intent.category.DEFAULT" />
-51-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:26:17-76
-51-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:26:27-73
-52                <category android:name="android.intent.category.BROWSABLE" />
-52-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:27:17-78
-52-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:27:27-75
-53
-54                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
+35        <activity android:name="com.example.gamja.activity.UserNameActivity" />
+35-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:15:9-72
+35-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:15:19-60
+36        <activity android:name="com.example.gamja.activity.LoginActivity" />
+36-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:9-60
+36-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:19-57
+37        <activity android:name="com.example.gamja.activity.SplashActivity" >
+37-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:17:9-23:20
+37-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:17:19-58
+38            <intent-filter>
+38-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:18:13-22:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:17-69
+39-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:21:17-77
+41-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:21:27-74
+42            </intent-filter>
+43        </activity>
+44        <activity android:name="com.example.gamja.activity.MainActivity" />
+44-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:24:9-59
+44-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:24:19-56
+45        <activity
+45-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:25:9-34:20
+46            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+46-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:25:19-76
+47            android:launchMode="singleTask"
+47-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:19:13-44
+48            android:theme="@style/TransparentCompat" >
+48-->[com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:20:13-53
+49            <intent-filter>
+49-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:26:13-33:29
+50                <action android:name="android.intent.action.VIEW" />
+50-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:27:17-69
+50-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:27:25-66
+51
+52                <category android:name="android.intent.category.DEFAULT" />
+52-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:28:17-76
+52-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:28:27-73
+53                <category android:name="android.intent.category.BROWSABLE" />
+53-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:29:17-78
+53-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:29:27-75
+54
 55                <data
-55-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:30:17-31:78
+55-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:30:17-32:78
 56                    android:host="oauth"
-56-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:30:23-43
-57                    android:scheme="kakaoede31607a495852bc2303048e7ae2e37" />
-57-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:31:21-75
+56-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:31:21-41
+57                    android:scheme="kakao1b208d5f4bb6221f75e28c4cf31d6a9a" />
+57-->C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:32:21-75
 58            </intent-filter>
 59        </activity>
 60        <activity

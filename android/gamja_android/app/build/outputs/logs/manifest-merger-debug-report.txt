@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-36:12
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-37:12
 MERGED from [androidx.databinding:databinding-adapters:4.1.1] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\11c30eab7fa9069b3a2c9ff9b44f2cb2\databinding-adapters-4.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.1.1] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\fb1ff2ae0efbc692f9d356fad5624d4e\databinding-runtime-4.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:viewbinding:4.1.1] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\088b7485e805dcbe5eacdb632761df66\jetified-viewbinding-4.1.1\AndroidManifest.xml:17:1-22:12
@@ -52,20 +52,20 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\kanggm\.gradle\c
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\fa896f12ed7cf4536bd5d5880aa662e0\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\1a0f803fcda82c135932fe0b00cab5d2\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\427e5bb4ffc60755053de60fe775a963\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-36:12
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-37:12
 		INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-36:12
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:1-37:12
 		INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:2:11-69
@@ -74,7 +74,7 @@ ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\An
 	android:name
 		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:7:5-34:19
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:7:5-35:19
 MERGED from [com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:11:5-21:19
 MERGED from [com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:11:5-21:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\5936cfff72ae8ebd7b59ec4b3061e4eb\material-1.4.0\AndroidManifest.xml:22:5-20
@@ -101,30 +101,34 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ka
 		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:14:9-65
 	android:name
 		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:8:9-42
-activity#com.example.gamja.LoginActivity
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:15:9-60
+activity#com.example.gamja.activity.UserNameActivity
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:15:9-72
 	android:name
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:15:19-48
-activity#com.example.gamja.SplashActivity
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:9-21:20
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:15:19-60
+activity#com.example.gamja.activity.LoginActivity
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:9-60
 	android:name
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:19-49
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:16:19-57
+activity#com.example.gamja.activity.SplashActivity
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:17:9-23:20
+	android:name
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:17:19-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:17:13-20:29
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:19:27-74
-activity#com.example.gamja.MainActivity
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:22:9-59
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:21:27-74
+activity#com.example.gamja.activity.MainActivity
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:24:9-59
 	android:name
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:22:19-47
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:24:19-56
 activity#com.kakao.sdk.auth.AuthCodeHandlerActivity
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:23:9-33:20
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:25:9-34:20
 MERGED from [com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:17:9-20:56
 MERGED from [com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:17:9-20:56
 	android:launchMode
@@ -132,27 +136,27 @@ MERGED from [com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transfo
 	android:theme
 		ADDED from [com.kakao.sdk:v2-auth:2.5.2] C:\Users\kanggm\.gradle\caches\transforms-2\files-2.1\beaa40e74ea478b21cdab9791e7fa841\jetified-v2-auth-2.5.2\AndroidManifest.xml:20:13-53
 	android:name
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:23:19-76
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:oauth+data:scheme:kakaoede31607a495852bc2303048e7ae2e37
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:24:13-32:29
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:25:19-76
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:oauth+data:scheme:kakao1b208d5f4bb6221f75e28c4cf31d6a9a
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:26:13-33:29
 action#android.intent.action.VIEW
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:27:25-66
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:26:17-76
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:28:17-76
 	android:name
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:26:27-73
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:28:27-73
 category#android.intent.category.BROWSABLE
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:27:17-78
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:29:17-78
 	android:name
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:27:27-75
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:29:27-75
 data
-ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:30:17-31:78
+ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:30:17-32:78
 	android:host
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:30:23-43
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:31:21-41
 	android:scheme
-		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:31:21-75
+		ADDED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml:32:21-75
 uses-sdk
 INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\kanggm\Documents\GAMJA\android\gamja_android\app\src\main\AndroidManifest.xml

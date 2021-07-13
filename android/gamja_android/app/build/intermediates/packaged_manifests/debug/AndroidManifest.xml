@@ -32,15 +32,16 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        <activity android:name="com.example.gamja.LoginActivity" />
-        <activity android:name="com.example.gamja.SplashActivity" >
+        <activity android:name="com.example.gamja.activity.UserNameActivity" />
+        <activity android:name="com.example.gamja.activity.LoginActivity" />
+        <activity android:name="com.example.gamja.activity.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.gamja.MainActivity" />
+        <activity android:name="com.example.gamja.activity.MainActivity" />
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:launchMode="singleTask"
@@ -51,10 +52,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
                 <data
                     android:host="oauth"
-                    android:scheme="kakaoede31607a495852bc2303048e7ae2e37" />
+                    android:scheme="kakao1b208d5f4bb6221f75e28c4cf31d6a9a" />
             </intent-filter>
         </activity>
         <activity

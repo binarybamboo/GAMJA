@@ -1,5 +1,5 @@
 package com.example.gamja
 
 object MyApi{
-    const val AppKey="ede31607a495852bc2303048e7ae2e37"
+    const val AppKey="1b208d5f4bb6221f75e28c4cf31d6a9a"
 }
