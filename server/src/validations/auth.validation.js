@@ -1,10 +1,15 @@
 const Joi = require('joi');
 
-const register = {
+// const register = {
+//   body: Joi.object().keys({
+//     email: Joi.string().required().description('callback email querystring'),
+//   }),
+// };
+const login = {
   body: Joi.object().keys({
-    email: Joi.string().required().description('callback email querystring'),
+    email: Joi.string().required().description('need email'),
   }),
 };
 module.exports = {
-  register,
+  login,
 };

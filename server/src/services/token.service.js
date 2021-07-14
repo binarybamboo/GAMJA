@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 const jwt = require('jsonwebtoken');
 const moment = require('moment');
 const config = require('../config/config');
@@ -46,7 +47,7 @@ const generateAuthTokens = async user => {
     'minutes',
   );
   const accessToken = generateToken(
-    user.id,
+    user._id,
     accessTokenExpires,
     tokenTypes.ACCESS,
   );
@@ -56,13 +57,13 @@ const generateAuthTokens = async user => {
     'days',
   );
   const refreshToken = generateToken(
-    user.id,
+    user._id,
     refreshTokenExpires,
     tokenTypes.REFRESH,
   );
   await saveToken(
     refreshToken,
-    user.id,
+    user._id,
     refreshTokenExpires,
     tokenTypes.REFRESH,
   );

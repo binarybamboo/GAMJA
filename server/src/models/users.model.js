@@ -14,10 +14,6 @@ const userSchema = mongoose.Schema(
       trim: true,
       lowercase: true,
     },
-    created_at: {
-      type: Date,
-      default: Date.now,
-    },
   },
   {
     timestamps: true,
