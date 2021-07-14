@@ -21,7 +21,6 @@ if (config.env !== 'test') {
   app.use(morgan.successHandler);
   app.use(morgan.errorHandler);
 }
-
 // set security HTTP headers
 app.use(helmet());
 
@@ -49,6 +48,11 @@ if (config.env === 'production') {
 
 // api routes
 app.use('/', routes);
+
+// api health check
+app.get('/health', (req, res) => {
+  res.status(200).send();
+});
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {
