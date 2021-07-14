@@ -1,7 +1,8 @@
 const express = require('express');
 const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
-// const docsRoute = require('./docs.route');
+const diaryRoute = require('./diary.route');
+const diaryGroupRoute = require('./diary-group.route');
 
 const router = express.Router();
 
@@ -13,6 +14,14 @@ const defaultRoutes = [
   {
     path: '/user',
     route: userRoute,
+  },
+  {
+    path: '/diary',
+    route: diaryRoute,
+  },
+  {
+    path: '/diary-group',
+    route: diaryGroupRoute,
   },
 ];
 
