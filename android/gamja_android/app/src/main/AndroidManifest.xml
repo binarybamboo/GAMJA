@@ -12,7 +12,8 @@
         android:roundIcon="@drawable/gamja_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".view.SubDiaryActivity"></activity>
+        <activity android:name=".view.DetailDiaryActivity"></activity>
+        <activity android:name=".view.SubDiaryActivity" />
         <activity
             android:name=".view.UserNameActivity"
             android:windowSoftInputMode="adjustResize" />

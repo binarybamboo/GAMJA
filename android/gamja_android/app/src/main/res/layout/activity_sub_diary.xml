@@ -4,7 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-
+        <variable
+            name="vm"
+            type="com.example.gamja.viewmodels.SubDiaryViewModel" />
+        <variable
+            name="activity"
+            type="com.example.gamja.view.SubDiaryActivity" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,18 +23,24 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:background="@drawable/gradient"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2">
 
                 <TextView
-                    android:layout_width="160sp"
-                    android:layout_height="80sp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="34sp"
+                    android:layout_width="match_parent"
                     android:fontFamily="@font/font_style"
-                    android:text="일기" />
+                    android:layout_height="match_parent"
+                    android:text="@{activity.diaryTitle}" />
             </LinearLayout>
 
             <LinearLayout
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="8">
@@ -38,7 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/diary_recycler_view"
+                        android:id="@+id/sub_diary_recycler_view"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -54,6 +65,7 @@
                 android:layout_height="0dp"
                 android:orientation="horizontal">
                 <Button
+                    android:textSize="24sp"
                     android:layout_weight="1"
                     app:layout_constraintVertical_weight="1"
                     android:fontFamily="@font/font_style"
@@ -61,7 +73,7 @@
                     android:background="@color/gamja"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="다이어리 추가" />
+                    android:text="일기쓰기" />
             </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

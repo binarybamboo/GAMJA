@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         ViewModelProvider(this,MainViewModel.Factory(application)).get(MainViewModel::class.java)
     }
     lateinit var mainAdapter: MainRecyclerViewAdapter
-    val datas = arrayListOf<Diary>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= DataBindingUtil.setContentView(this,R.layout.activity_main)
@@ -38,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
 
         mainViewModel.userName.observe(this,{
-
+            binding.userNameText.text= "$it's \n 다이어리"
         })
         //데이터값이 변경되면 옵저빙으로 뷰렌더링
         mainViewModel.diaryList.observe(this,{
@@ -77,6 +76,7 @@ class MainActivity : AppCompatActivity() {
             override fun onClicked() {
                 //다이어리추가
                 Log.d("TAG", "click dialog ")
+
             }
 
         })
@@ -85,9 +85,13 @@ class MainActivity : AppCompatActivity() {
         mainAdapter = MainRecyclerViewAdapter(this)
         binding.diaryRecyclerView.adapter =mainAdapter
         binding.diaryRecyclerView.layoutManager=GridLayoutManager(applicationContext,2)
-        mainAdapter.setItemClickListener(object : MainRecyclerViewAdapter.OnItemClickListener{
-            override fun onClick(v: View, position: Int) {
-                startActivity(Intent(applicationContext, SubDiaryActivity::class.java))
+        mainAdapter.setItemClickListener(object : MainRecyclerViewAdapter.OnItemClickListener {
+            override fun onClick(v: View, position: Int, title: String?) {
+                //여기서 서버에서 다이어리 요청하기
+                val intent = Intent(applicationContext, SubDiaryActivity::class.java)
+                intent.putExtra("diaryTitle", title)
+                Log.d("TAG", "main title: $title")
+                startActivity(intent)
             }
 
         })

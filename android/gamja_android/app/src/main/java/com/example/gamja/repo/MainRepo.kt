@@ -4,8 +4,10 @@ import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.gamja.model.Diary
+import com.example.gamja.utils.UserApi
 
 class MainRepo(application:Application) {
+    val context=application
     //서버에서 다이어리 갖고오기
     fun getMyDiary() :List<Diary> {
         val diaryList= arrayListOf<Diary>()
@@ -24,5 +26,8 @@ class MainRepo(application:Application) {
     //서버에 다이어리 추가하기
     fun addMyDiary(){
 
+    }
+    fun getUserName():String{
+        return UserApi().loadUserNameData(context)
     }
 }

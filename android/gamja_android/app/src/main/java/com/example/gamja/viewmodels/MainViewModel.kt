@@ -18,11 +18,15 @@ class MainViewModel(application: Application):AndroidViewModel(application) {
         get() = _diaryList
 
     init {
+        getUserName()
         getMyDiary()
     }
 
     fun updateUserName(){
 
+    }
+    fun getUserName(){
+        _userName.value=repo.getUserName()
     }
     //서버에서 다이어리 갖고오기
     fun getMyDiary(){
