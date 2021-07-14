@@ -41,6 +41,7 @@
     "multer-s3": "^2.9.0",
     "multer-s3-with-transforms": "github:Aeonrush/multer-s3-with-transforms",
     "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
     "validator": "^13.6.0",
     "winston": "^3.3.3",
     "xss-clean": "^0.1.1"
