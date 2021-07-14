@@ -1,8 +1,9 @@
 const httpStatus = require('http-status');
 const mongoose = require('mongoose');
 const logger = require('../config/logger');
-const { User } = require('../models');
+const { User, Token } = require('../models');
 const ApiError = require('../utils/ApiError');
+const { tokenService } = require('./token.service');
 
 const getUserByEmail = async userBody => {
   return User.findOne({ email: userBody });
@@ -22,9 +23,14 @@ const createUser = async userBody => {
   logger.info(userData);
   return userData.save();
 };
+const changeName = async user => {
+  const uuid = user.user._id;
+  await User.updateOne({ _id: uuid }, { nickname: user.body.nickname });
+};
 
 module.exports = {
   getUserByEmail,
   createUser,
   getUserById,
+  changeName,
 };

@@ -6,8 +6,9 @@ const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
 const cors = require('cors');
 const httpStatus = require('http-status');
+const passport = require('passport');
 const config = require('./config/config');
-
+const { jwtStrategy } = require('./config/passport');
 const morgan = require('./config/morgan');
 
 const { authLimiter } = require('./middlewares/rateLimiter');
@@ -40,6 +41,9 @@ app.use(compression());
 // enable cors
 app.use(cors());
 app.options('*', cors());
+
+app.use(passport.initialize());
+passport.use('jwt', jwtStrategy);
 
 // limit repeated failed requests to auth endpoints
 if (config.env === 'production') {
