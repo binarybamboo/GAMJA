@@ -12,8 +12,10 @@
         android:roundIcon="@drawable/gamja_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".view.UserNameActivity"
-            android:windowSoftInputMode="adjustResize"></activity>
+        <activity android:name=".view.SubDiaryActivity"></activity>
+        <activity
+            android:name=".view.UserNameActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".view.LoginActivity" />
         <activity android:name=".view.SplashActivity">
             <intent-filter>
@@ -26,8 +28,10 @@
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="oauth"
                     android:scheme="kakao1b208d5f4bb6221f75e28c4cf31d6a9a" />
