@@ -10,6 +10,19 @@ const login = {
     email: Joi.string().required().description('need email'),
   }),
 };
+const logout = {
+  body: Joi.object().keys({
+    refreshToken: Joi.string().required(),
+  }),
+};
+
+const refreshTokens = {
+  body: Joi.object().keys({
+    refreshToken: Joi.string().required(),
+  }),
+};
 module.exports = {
   login,
+  logout,
+  refreshTokens,
 };
