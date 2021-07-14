@@ -11,44 +11,67 @@
             name="activity"
             type="com.example.gamja.view.MainActivity" />
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:weightSum="11"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".view.MainActivity"
-        >
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="160sp"
+                android:layout_height="80sp"
+                android:fontFamily="@font/font_style"
+                android:text="@{vm.userName+@string/main_text}" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-            <TextView
-                android:fontFamily="@font/font_style"
-                android:text="@{vm.userName+@string/main_text}"
-                android:layout_width="160sp"
-                android:layout_height="80sp"/>
-        </LinearLayout>
-        <Button
-            android:id="@+id/logout_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="580dp"
-            android:text="로그아웃"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.95"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="0dp"
+            android:layout_weight="8">
+                <ScrollView
+                    android:id="@+id/main_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/diary_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-        <Button
-            android:onClick="@{()->activity.goAddDiaryDialog()}"
-            android:fontFamily="@font/font_style"
-            android:id="@+id/add_diary_btn"
-            android:background="@color/gamja"
+                    </androidx.recyclerview.widget.RecyclerView>
+                </ScrollView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="다이어리 추가"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="0dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_weight="7"
+                android:id="@+id/logout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="로그아웃"
+              />
+            <Button
+                android:layout_weight="1"
+                app:layout_constraintVertical_weight="1"
+                android:onClick="@{()->activity.goAddDiaryDialog()}"
+                android:fontFamily="@font/font_style"
+                android:id="@+id/add_diary_btn"
+                android:background="@color/gamja"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="다이어리 추가" />
+        </LinearLayout>
+    </LinearLayout>
 </layout>
