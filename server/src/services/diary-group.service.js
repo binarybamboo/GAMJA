@@ -37,7 +37,7 @@ const addDiary = async (groupId, diaryId) => {
   const diaryGroup = await DiaryGroup.findOne({ _id: groupId });
   const diaryList = [...diaryGroup.diary, diaryId];
   logger.info(diaryList);
-  return diaryGroup.update({ diary: diaryList });
+  return diaryGroup.updateOne({ diary: diaryList });
 };
 
 const printAll = async id => {
