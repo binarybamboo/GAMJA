@@ -9,14 +9,11 @@ const router = express.Router();
 
 router
   .route('/')
+  .get([auth, validate(diaryValidation.getDiary)], diaryController.getDiary)
   .post(
     [auth, validate(diaryValidation.createDiary), upload.array('img', 5)],
     diaryController.createDiary,
   );
-
-router
-  .route('/:diaryGroupId')
-  .get([auth, validate(diaryValidation.getDiary)], diaryController.getDiary);
 
 router
   .route('/:diaryId')
