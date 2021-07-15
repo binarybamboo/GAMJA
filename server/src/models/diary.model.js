@@ -11,13 +11,15 @@ const diarySchema = mongoose.Schema(
       required: true,
     },
     photo: [{ type: String }],
+    photo_key: [{ type: String }],
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    state: { type: Number, default: 0 },
   },
   {
     timestamps: true,
   },
 );
 
-const DiaryGroup = mongoose.model('Diary', diarySchema);
+const Diary = mongoose.model('Diary', diarySchema);
 
-module.exports = DiaryGroup;
+module.exports = Diary;
