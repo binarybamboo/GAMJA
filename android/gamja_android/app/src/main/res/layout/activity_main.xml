@@ -26,22 +26,24 @@
             android:layout_weight="2">
 
             <TextView
-                android:layout_alignParentLeft="true"
-                android:textColor="@color/black"
-                android:textSize="34sp"
                 android:id="@+id/user_name_text"
                 android:layout_width="160dp"
                 android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="30dp"
                 android:fontFamily="@font/font_style"
-                android:text="@{vm.userName" />
+                android:text="@{vm.userName"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
 
             <Button
+                android:background="@drawable/ic_baseline_settings_24"
                 android:id="@+id/setting_btn"
-                android:layout_margin="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
-                android:text="설정" />
+                 />
         </RelativeLayout>
 
         <LinearLayout
@@ -69,13 +71,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal">
-            <Button
-                android:layout_weight="7"
-                android:id="@+id/logout_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="로그아웃"
-              />
             <Button
                 android:textSize="24sp"
                 android:layout_weight="1"

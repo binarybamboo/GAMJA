@@ -48,13 +48,15 @@ class RetrofitDiaryManager {
     suspend fun addSubDiary(
         accessToken: String, postSubDiary: PostSubDiary): Response<SubDiary>? {
         val params = HashMap<String, Any>()
-//        params["name"] = postSubDiary.name!!
-//        params["description"] = postSubDiary.description!!
-        Log.d("TAG", "postSubDiary to string $postSubDiary")
+        params["img"] = postSubDiary.img!!
+        params["diaryGroupId"] = postSubDiary.diaryGroupId!!
+        params["name"] = postSubDiary.name!!
+        params["description"] = postSubDiary.description!!
+        Log.d("TAG", "postSubDiary to addSubDiary $postSubDiary")
         return retrofitService?.addSubDiary("Bearer $accessToken",params)
     }
     //서브다이어리 갖고오기
-//    suspend fun getSubDiary(accessToken: String) : Response<List<SubDiary>>? {
-//        return retrofitService?.getSubDiary("Bearer $accessToken")
-//    }
+    suspend fun getSubDiary(accessToken: String,groupId:String) : Response<List<SubDiary>>? {
+        return retrofitService?.getSubDiary("Bearer $accessToken",groupId)
+   }
 }

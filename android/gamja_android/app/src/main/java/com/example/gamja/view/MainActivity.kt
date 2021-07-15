@@ -53,14 +53,14 @@ class MainActivity : AppCompatActivity() {
             mainAdapter.notifyDataSetChanged()
         })
 
-        binding.logoutBtn.setOnClickListener {
-            logOut()
-            val sharedPref = getSharedPreferences(
-                "pref", Context.MODE_PRIVATE)
-            val edit= sharedPref?.edit()
-            edit?.clear()
-            edit?.apply()
-        }
+//        binding.logoutBtn.setOnClickListener {
+//            logOut()
+//            val sharedPref = getSharedPreferences(
+//                "pref", Context.MODE_PRIVATE)
+//            val edit= sharedPref?.edit()
+//            edit?.clear()
+//            edit?.apply()
+//        }
 
         Log.d("TAG", "main accessToken: $accessToken")
     }
@@ -101,10 +101,11 @@ class MainActivity : AppCompatActivity() {
         binding.diaryRecyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
         mainAdapter.setItemClickListener(object :
             MainRecyclerViewAdapter.OnItemClickListener {
-            override fun onClick(v: View, position: Int, title: String?) {
+            override fun onClick(v: View, position: Int, title: String?,id:String?) {
                 //여기서 서버에서 다이어리 요청하기
                 val intent = Intent(applicationContext, SubDiaryActivity::class.java)
                 intent.putExtra("diaryTitle", title)
+                intent.putExtra("groupId",id)
                 Log.d("TAG", "main title: $title")
                 startActivity(intent)
             }

@@ -7,19 +7,25 @@ import android.util.Log
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.gamja.R
 import com.example.gamja.databinding.ActivitySubDiaryBinding
 import com.example.gamja.model.Diary
 import com.example.gamja.model.SubDiary
+import com.example.gamja.utils.UserApi
 import com.example.gamja.view.recyclerview.MainRecyclerViewAdapter
 import com.example.gamja.view.recyclerview.SubDiaryRecyclerViewAdapter
 import com.example.gamja.viewmodels.SubDiaryViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class SubDiaryActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySubDiaryBinding
     lateinit var subDiaryAdapter: SubDiaryRecyclerViewAdapter
      var diaryTitle: String?=null
+    var groupId:String?=null
+    private lateinit var accessToken:String
     private val subDiaryViewModel: SubDiaryViewModel by lazy {
         ViewModelProvider(this, SubDiaryViewModel.Factory(application)).get(SubDiaryViewModel::class.java)
     }
@@ -32,9 +38,13 @@ class SubDiaryActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         diaryTitle= intent.getStringExtra("diaryTitle").toString()
-
+        groupId= intent.getStringExtra("groupId").toString()
         initRecycler()
-
+        //엑세스토큰갖고오기
+        accessToken= UserApi().loadAccessToken(this)
+        lifecycleScope.launch(Dispatchers.IO) {
+            subDiaryViewModel.getSubDiary(accessToken,groupId!!)
+        }
         //데이터값이 변경되면 옵저빙으로 뷰렌더링
         subDiaryViewModel.diaryList.observe(this,{
             subDiaryAdapter.datas= it as ArrayList<SubDiary>
@@ -58,6 +68,9 @@ class SubDiaryActivity : AppCompatActivity() {
         })
     }
     fun goToaddSubDiary(){
-        startActivity(Intent(this, AddSubDiaryActivity::class.java))
+        val intent=Intent(this, AddSubDiaryActivity::class.java)
+        intent.putExtra("accessToken",accessToken)
+        intent.putExtra("diaryGroupId",groupId)
+        startActivity(intent)
     }
 }

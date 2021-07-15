@@ -21,12 +21,12 @@ class MainRecyclerViewAdapter(private val context: Context): RecyclerView.Adapte
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(datas[position])
         holder.diaryImg.setOnClickListener{
-            itemClickListener.onClick(it,position,datas[position].name)
+            itemClickListener.onClick(it,position,datas[position].name,datas[position]._id)
         }
     }
     // (2) 리스너 인터페이스
     interface OnItemClickListener {
-        fun onClick(v: View, position: Int,title:String?)
+        fun onClick(v: View, position: Int,title:String?,id:String?)
     }
     // (3) 외부에서 클릭 시 이벤트 설정
     fun setItemClickListener(onItemClickListener: OnItemClickListener) {

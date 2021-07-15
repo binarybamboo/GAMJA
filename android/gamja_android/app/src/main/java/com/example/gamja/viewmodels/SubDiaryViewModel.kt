@@ -2,10 +2,8 @@ package com.example.gamja.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.example.gamja.model.Diary
-import com.example.gamja.model.PostDiary
+import com.example.gamja.model.PostSubDiary
 import com.example.gamja.model.SubDiary
-import com.example.gamja.repo.MainRepo
 import com.example.gamja.repo.SubDiaryRepo
 import kotlinx.coroutines.launch
 
@@ -21,16 +19,18 @@ class SubDiaryViewModel(application: Application): AndroidViewModel(application)
     init {
     }
 
-    suspend fun getSubDiary(accessToken: String){
+    suspend fun getSubDiary(accessToken: String, groupId:String){
         viewModelScope.launch {
-            val response=repo.getSubDiary(accessToken)
+            val response=repo.getSubDiary(accessToken,groupId)
+            diarySaveList= response as ArrayList<SubDiary>
             _diaryList.postValue(diarySaveList)
         }
     }
-    suspend fun addSubDiary(accessToken:String,postDiary: PostDiary){
+    suspend fun addSubDiary(accessToken:String,postSubDiary: PostSubDiary){
         viewModelScope.launch {
-            val response=repo.addSubDiary(accessToken, postDiary)
+            val response=repo.addSubDiary(accessToken, postSubDiary)
             if (response != null) {
+                diarySaveList.add(response)
                 _diaryList.postValue(diarySaveList)
             }
 

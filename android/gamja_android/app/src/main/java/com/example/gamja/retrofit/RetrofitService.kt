@@ -10,10 +10,7 @@ import com.google.gson.JsonObject
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface RetrofitService {
     @POST("auth/login")
@@ -30,5 +27,5 @@ interface RetrofitService {
     suspend fun addSubDiary(@Header("Authorization") accessToken:String , @Body postSubDiary:HashMap<String, Any>): Response<SubDiary>
 
     @GET("diary/")
-    suspend fun getSubDiary(@Header("Authorization") accessToken:String, @Body groupId:HashMap<String, Any>):Response<List<SubDiary>>
+    suspend fun getSubDiary(@Header("Authorization") accessToken:String,@Query("diaryGroupId") groupId:String):Response<List<SubDiary>>
 }

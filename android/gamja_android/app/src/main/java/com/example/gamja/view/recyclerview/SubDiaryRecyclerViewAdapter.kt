@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.gamja.R
 import com.example.gamja.model.SubDiary
 
@@ -19,7 +22,10 @@ class SubDiaryRecyclerViewAdapter (private val context: Context): RecyclerView.A
 
     override fun getItemCount(): Int = datas.size
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(datas[position])
+        Glide.with(holder.itemView.context)
+                .load(datas[position].img)
+                .transform(CenterCrop(), RoundedCorners(50))
+                .into(holder.diaryImg)
         holder.diaryImg.setOnClickListener {
             itemClickListener.onClick(it,position,datas[position].title!!,datas[position].content!!)
         }
@@ -36,7 +42,5 @@ class SubDiaryRecyclerViewAdapter (private val context: Context): RecyclerView.A
     private lateinit var itemClickListener : OnItemClickListener
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val diaryImg: ImageView = itemView.findViewById(R.id.sub_diary_img)
-        fun bind(item: SubDiary) {
-        }
     }
 }
