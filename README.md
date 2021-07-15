@@ -1,5 +1,9 @@
 # GAMJA
-감자(감성자극 일기장)
+<br/>감자(감성자극 일기장)<br/>
+
+<img src="https://user-images.githubusercontent.com/54613588/125838114-59e1839e-44d9-4fa0-ae8f-34086ad17e3a.jpg" width="300" height="600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://user-images.githubusercontent.com/54613588/125838123-fc41716c-aab3-49ec-b1e0-9e3576b9dffa.jpg" width="300" height="600">
+
 ## 프로젝트 소개 🥔
 **'감자(감성자극 일기장)는 '.**
 
