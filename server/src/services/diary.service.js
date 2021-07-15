@@ -2,24 +2,32 @@
 const mongoose = require('mongoose');
 const httpStatus = require('http-status');
 const language = require('@google-cloud/language');
+const { Translate } = require('@google-cloud/translate').v2;
 const { Diary } = require('../models');
 const { s3 } = require('../middlewares/upload');
 const ApiError = require('../utils/ApiError');
 const diaryGroupService = require('./diary-group.service');
+const translateKey = require('../config/translate.json');
 
 const client = new language.LanguageServiceClient();
-
+const translate = new Translate({
+  credentials: translateKey,
+  projectId: translateKey.project_id,
+});
 const createDiary = async req => {
   const { files } = req;
   const locationArray = files.map(_ => {
     return _.location;
   });
+  const target = 'en';
+
   const keyArray = files.map(_ => {
     return _.key;
   });
   const text = req.body.description;
+  const [translation] = await translate.translate(text, target);
   const document = {
-    content: text,
+    content: translation,
     type: 'PLAIN_TEXT',
   };
   const results = await client.analyzeSentiment({ document });
