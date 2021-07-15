@@ -29,4 +29,4 @@
 ## Member
 
 | 조찬민(Server,infra,AI)🧑‍💻                | 강구민🧑‍💻(Android,AI)                      | 신기철🧑‍💻(Server,AI)                    |</br>
-| [@jochanmin](https://github.com/jochanmin) | [@9mean](https://github.com/9mean)       　　| [@skck0226](https://github.com/skck0226) |
+| [@jochanmin](https://github.com/jochanmin)               　　   　　   　　 | [@9mean](https://github.com/9mean)          　　        　　      　　| [@skck0226](https://github.com/skck0226)            　 　   　　　 |
