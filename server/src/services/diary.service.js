@@ -1,10 +1,13 @@
 /* eslint-disable no-underscore-dangle */
 const mongoose = require('mongoose');
 const httpStatus = require('http-status');
+const language = require('@google-cloud/language');
 const { Diary } = require('../models');
 const { s3 } = require('../middlewares/upload');
 const ApiError = require('../utils/ApiError');
 const diaryGroupService = require('./diary-group.service');
+
+const client = new language.LanguageServiceClient();
 
 const createDiary = async req => {
   const { files } = req;
@@ -14,12 +17,21 @@ const createDiary = async req => {
   const keyArray = files.map(_ => {
     return _.key;
   });
+  const text = req.body.description;
+  const document = {
+    content: text,
+    type: 'PLAIN_TEXT',
+  };
+  const results = await client.analyzeSentiment({ document });
+  const sentiment = results[0].documentSentiment;
+
   const diary = await Diary.create({
     name: req.body.name,
     description: req.body.description,
     author: mongoose.Types.ObjectId(req.user._id),
     photo: locationArray,
     photo_key: keyArray,
+    state: sentiment.score * 100,
   });
   await diaryGroupService.addDiary(req.body.diaryGroupId, diary._id);
   return diary;
