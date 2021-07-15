@@ -2,6 +2,7 @@ package com.example.gamja.retrofit
 
 import com.example.gamja.model.Diary
 import com.example.gamja.model.PostDiary
+import com.example.gamja.model.SubDiary
 import com.example.gamja.utils.MyApi
 import com.example.gamja.utils.UserApi
 import com.google.gson.JsonElement
@@ -24,4 +25,10 @@ interface RetrofitService {
 
     @GET("diary-group")
     suspend fun getDiaryGroup(@Header("Authorization") accessToken:String):Response<List<Diary>>
+
+    @POST("diary")
+    suspend fun addSubDiary(@Header("Authorization") accessToken:String , @Body postSubDiary:HashMap<String, Any>): Response<SubDiary>
+
+    @GET("diary/")
+    suspend fun getSubDiary(@Header("Authorization") accessToken:String, @Body groupId:HashMap<String, Any>):Response<List<SubDiary>>
 }

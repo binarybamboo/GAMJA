@@ -41,17 +41,8 @@ class MainActivity : AppCompatActivity() {
         initRecycler()
         //엑세스토큰갖고오기
         accessToken=UserApi().loadAccessToken(this)
-         lifecycleScope.launch(Dispatchers.Main) {
-            async(Dispatchers.IO) {
+         lifecycleScope.launch(Dispatchers.IO) {
                 mainViewModel.getMyDiary(accessToken)
-            }.await()
-            //데이터값이 변경되면 옵저빙으로 뷰렌더링
-            delay(300)
-            mainViewModel.diaryList.observe(this@MainActivity, {
-                Log.d("TAG", "다이어리리스트 옵저빙중 main안: $it")
-                mainAdapter.datas=it as ArrayList<Diary>
-                mainAdapter.notifyDataSetChanged()
-            })
         }
         mainViewModel.userName.observe(this,{
             binding.userNameText.text= "$it's \n 다이어리"

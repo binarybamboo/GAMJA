@@ -3,6 +3,7 @@ package com.example.gamja.retrofit
 import android.util.Log
 import com.example.gamja.model.Diary
 import com.example.gamja.model.PostDiary
+import com.example.gamja.model.PostSubDiary
 import com.example.gamja.model.SubDiary
 import com.example.gamja.utils.MyApi
 import com.example.gamja.utils.RESPONSE_STATE
@@ -43,4 +44,17 @@ class RetrofitDiaryManager {
     suspend fun getDiaryGroup(accessToken: String) : Response<List<Diary>>? {
         return retrofitService?.getDiaryGroup("Bearer $accessToken")
     }
+    //서브다이어리 추가하기
+    suspend fun addSubDiary(
+        accessToken: String, postSubDiary: PostSubDiary): Response<SubDiary>? {
+        val params = HashMap<String, Any>()
+//        params["name"] = postSubDiary.name!!
+//        params["description"] = postSubDiary.description!!
+        Log.d("TAG", "postSubDiary to string $postSubDiary")
+        return retrofitService?.addSubDiary("Bearer $accessToken",params)
+    }
+    //서브다이어리 갖고오기
+//    suspend fun getSubDiary(accessToken: String) : Response<List<SubDiary>>? {
+//        return retrofitService?.getSubDiary("Bearer $accessToken")
+//    }
 }
