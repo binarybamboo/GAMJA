@@ -1,0 +1,40 @@
+language: node_js
+node_js:
+  - 12 #노드 버전
+branches:
+  only:
+    - master
+before_deploy:
+  - rm -rf node_modules
+  - zip -r gamja * #GAMJA이름으로 zip파일 생성
+  - mkdir -p deploy #deploy폴더 생성
+  - mv gamja.zip deploy/gamja.zip #만든 zip파일을 deploy폴더로 이동
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY #추후에 travis에서 설정
+    secret_access_key: $AWS_SECRET_KEY #추후에 travis에서 설정
+    bucket: gamja-ci-cd #s3버킷 이름
+    region: ap-northeast-2
+    skip_cleanup: true
+    local_dir: deploy
+    wait-until-deployed: true
+    on:
+      repo: jochanmin/gamja #본인의 repository
+      branch: master
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: gamja-ci-cd
+    key: gamja.zip
+    bundle_type: zip
+    application: GAMJA-CICD
+    deployment_group: GAMJA-CICD-GROUP #이전단계에서 설정한 deployment배포그룹
+    region: ap-northeast-2
+    wait-until-deployed: true
+    on:
+      repo: jochanmin/gamja/server #본인의 repository
+      branch: master
+notifications:
+  email:
+    recipients:
+      - happyjarban@gmail.com
