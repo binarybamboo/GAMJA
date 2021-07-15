@@ -20,6 +20,9 @@ const envVarsSchema = Joi.object()
     JWT_REFRESH_EXPIRATION_DAYS: Joi.number()
       .default(30)
       .description('days after which refresh tokens expire'),
+    ACCESSKEYID: Joi.string().required().description('AWS Access key'),
+    SECRETACCESSKEY: Joi.string().required().description('AWS Secret key'),
+    REGION: Joi.string().required().description('AWS Region'),
   })
   .unknown();
 
@@ -46,5 +49,10 @@ module.exports = {
     secret: envVars.JWT_SECRET,
     accessExpirationMinutes: envVars.JWT_ACCESS_EXPIRATION_MINUTES,
     refreshExpirationDays: envVars.JWT_REFRESH_EXPIRATION_DAYS,
+  },
+  aws: {
+    accesskey: envVars.ACCESSKEYID,
+    secretKey: envVars.SECRETACCESSKEY,
+    region: envVars.REGION,
   },
 };

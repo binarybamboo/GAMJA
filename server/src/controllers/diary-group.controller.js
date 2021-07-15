@@ -17,7 +17,6 @@ const getDiaryGroups = catchAsync(async (req, res) => {
 
 const updateDiaryGroup = catchAsync(async (req, res) => {
   const user = await diaryGroupService.updateDiaryGroupById(req);
-
   res.send(user);
 });
 

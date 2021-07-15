@@ -24,8 +24,15 @@ const createUser = async userBody => {
   return userData.save();
 };
 const changeName = async user => {
-  const uuid = user.user._id;
-  await User.updateOne({ _id: uuid }, { nickname: user.body.nickname });
+  // const uuid = user.user._id;
+  // await User.updateOne({ _id: uuid }, { nickname: user.body.nickname });
+  return User.findOneAndUpdate(
+    {
+      _id: user.user._id,
+    },
+    { $set: { nickname: user.body.nickname } },
+    { returnNewDocument: true },
+  );
 };
 
 module.exports = {

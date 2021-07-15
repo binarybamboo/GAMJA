@@ -40,7 +40,21 @@ const errorHandler = (err, req, res, next) => {
   res.status(statusCode).send(response);
 };
 
+const imageErrorHandler = (err, req, res, next) => {
+  if (err) {
+    if (err.message === 'File too large')
+      return res.status(httpStatus.BAD_REQUEST).json({ result: 500 });
+    // 파일 사이즈 초과시,
+    if (err.message === 'Extension Error')
+      return res.status(httpStatus.BAD_REQUEST).json({ result: 501 });
+    // 확장자 다를 시,
+    return res.status(httpStatus.BAD_REQUEST).json({ result: 502 }); // 나머지 에러
+  }
+  return next();
+};
+
 module.exports = {
   errorConverter,
   errorHandler,
+  imageErrorHandler,
 };
