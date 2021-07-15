@@ -5,7 +5,7 @@ const createDiary = {
   body: Joi.object().keys({
     name: Joi.string(),
     description: Joi.string().max(255),
-    parentId: Joi.string(),
+    diaryGroupId: Joi.string(),
   }),
 };
 

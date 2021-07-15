@@ -1,4 +1,3 @@
-const httpStatus = require('http-status');
 const express = require('express');
 const validate = require('../middlewares/validate');
 const { upload } = require('../middlewares/upload');

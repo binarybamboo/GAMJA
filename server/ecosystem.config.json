@@ -1,15 +1,21 @@
 {
   "apps": [
     {
-      "name": "app",
+      "name": "gamja_server",
       "script": "src/index.js",
       "instances": 1,
       "autorestart": true,
       "watch": false,
       "time": true,
       "env": {
-        "NODE_ENV": "developement"
-      }
+        "NODE_ENV": "production"
+      },
+      "exec_mode": "cluster",
+      "node_args": "--max_old_space_size=512",
+      "max_memory_restart": "200M",
+      "wait_ready": true,
+      "listen_timeout": 50000,
+      "kill_timeout": 5000
     }
   ]
 }

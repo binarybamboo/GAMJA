@@ -12,9 +12,8 @@ const diarySchema = mongoose.Schema(
     },
     photo: [{ type: String }],
     photo_key: [{ type: String }],
-    parentId: [{ type: String, required: true }],
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    state: [{ type: Number }],
+    state: { type: Number, default: 0 },
   },
   {
     timestamps: true,

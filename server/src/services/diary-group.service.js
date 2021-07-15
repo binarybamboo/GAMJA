@@ -1,8 +1,6 @@
 /* eslint-disable no-underscore-dangle */
-const httpStatus = require('http-status');
 const mongoose = require('mongoose');
 const { DiaryGroup } = require('../models');
-const ApiError = require('../utils/ApiError');
 const logger = require('../config/logger');
 
 const createDiaryGroup = async req => {
@@ -36,9 +34,10 @@ const deleteDiaryGroupById = async req => {
 };
 
 const addDiary = async (groupId, diaryId) => {
-  const parent = await DiaryGroup.findOne({ _id: groupId });
-  const array = [...parent.diary, diaryId];
-  return parent.update({ diary: array });
+  const diaryGroup = await DiaryGroup.findOne({ _id: groupId });
+  const diaryList = [...diaryGroup.diary, diaryId];
+  logger.info(diaryList);
+  return diaryGroup.update({ diary: diaryList });
 };
 
 const printAll = async id => {
