@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "b3fd843b-8229-4c07-9ea9-5a7536f1d8ef",
+		"name": "restapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "리프레쉬 토큰",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "WWW-Authenticate",
+						"value": "Basic realm=\"api\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InJvb3QiLCJleHAiOjE1ODcwNTkwMDcsImVtYWlsIjoiaGFwcHlqYXJiYW5AZ21haWwuY29tIiwib3JpZ19pYXQiOjE1ODcwNTU0MDd9.KTMJN-fyM4cfQtjn0GoAwa5t8HTLY1dlwj_djQkGnH0",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGVlNTFhODQ3MWIzNzI3ZDA2NTQ3YTEiLCJpYXQiOjE2MjYyNDM4MzQsImV4cCI6MTYyODgzNTgzNCwidHlwZSI6InJlZnJlc2gifQ.QIWL3HXNzj5FVfG0MQRVG9jJOIEsOMcWZzEmKIbjUfQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/refresh-tokens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"refresh-tokens"
+					]
+				},
+				"description": "correct header"
+			},
+			"response": []
+		},
+		{
+			"name": "로그인",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjEyNzc5NTYwLCJqdGkiOiI4NjllYmQ1ZjBlZmY0NjYxOWJlZjYzZmYwZDUyNTA1MyIsInVzZXJfaWQiOjIsIm9hdXRoX3VzZXJuYW1lIjoiZ2l0aHViX2pvY2hhbm1pbiJ9.EcS09lu8CmcqxuUyS3E_OFGQhC9v7pEyvvEiY2EoUk0",
+						"disabled": true
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "96b9445c-2fdf-49b2-8555-147ca47d7fac",
+						"disabled": true
+					},
+					{
+						"key": "server",
+						"type": "text",
+						"value": "secure",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"happyjarban@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "api-key",
+							"value": "96b9445c-2fdf-49b2-8555-147ca47d7fac",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "로그아웃",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGVlNTFhODQ3MWIzNzI3ZDA2NTQ3YTEiLCJpYXQiOjE2MjYyMzEzMDAsImV4cCI6MTYyODgyMzMwMCwidHlwZSI6InJlZnJlc2gifQ.x1XJwHxDP5F80TMgTAd0NefLFxfN2PUtuqRxcTczqa8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "다이어리 그룹 생성",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGVlNTFhODQ3MWIzNzI3ZDA2NTQ3YTEiLCJpYXQiOjE2MjYyNDM4MzQsImV4cCI6MTYyNjI0NTYzNCwidHlwZSI6ImFjY2VzcyJ9.sIgmYGRYS09TiS0wFCnxocRbQYctPaCMGwyDz2UgzTY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"test_Diary\",\r\n    \"description\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/diary-group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"diary-group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "다이어리 그룹 불러오기",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGVlNTFhODQ3MWIzNzI3ZDA2NTQ3YTEiLCJpYXQiOjE2MjYyNDY0OTksImV4cCI6MTYyNjI0ODI5OSwidHlwZSI6ImFjY2VzcyJ9.Osbtb6W9ss3-ppQRtuznaFZU4mPomDRSGvsF6JnEBR4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/diary-group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"diary-group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "다이어리 그룹 PATCH",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGVlNTFhODQ3MWIzNzI3ZDA2NTQ3YTEiLCJpYXQiOjE2MjYyNDY0OTksImV4cCI6MTYyNjI0ODI5OSwidHlwZSI6ImFjY2VzcyJ9.Osbtb6W9ss3-ppQRtuznaFZU4mPomDRSGvsF6JnEBR4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"sex\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/diary-group/60ee8656e7ce3b09d0db34ce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"diary-group",
+						"60ee8656e7ce3b09d0db34ce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "다이어 그룹 삭제",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGVlNTFhODQ3MWIzNzI3ZDA2NTQ3YTEiLCJpYXQiOjE2MjYyNDY0OTksImV4cCI6MTYyNjI0ODI5OSwidHlwZSI6ImFjY2VzcyJ9.Osbtb6W9ss3-ppQRtuznaFZU4mPomDRSGvsF6JnEBR4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/diary-group/60ee8656e7ce3b09d0db34ce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"diary-group",
+						"60ee8656e7ce3b09d0db34ce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "닉네임변경API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGVlNTFhODQ3MWIzNzI3ZDA2NTQ3YTEiLCJpYXQiOjE2MjYyNDM4MzQsImV4cCI6MTYyNjI0NTYzNCwidHlwZSI6ImFjY2VzcyJ9.sIgmYGRYS09TiS0wFCnxocRbQYctPaCMGwyDz2UgzTY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nickname\":\"강구민병신\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/nickname",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"nickname"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

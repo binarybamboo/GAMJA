@@ -4,12 +4,13 @@ import android.app.Dialog
 import android.content.Context
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.EditText
 import com.example.gamja.R
 
 class AddDiaryDialog(context: Context) {
     private val dialog=Dialog(context)
     interface OnClickListener{
-        fun onClicked()
+        fun onClicked(diaryName: String)
     }
     private lateinit var onClickListener:OnClickListener
     fun setOnClickListener(listener: OnClickListener){
@@ -24,8 +25,9 @@ class AddDiaryDialog(context: Context) {
 
         val btnCancel=dialog.findViewById<Button>(R.id.cancel_btn)
         val btnAdd=dialog.findViewById<Button>(R.id.add_btn)
+        val diaryName=dialog.findViewById<EditText>(R.id.add_diary_title)
         btnAdd.setOnClickListener{
-            onClickListener.onClicked()
+            onClickListener.onClicked(diaryName.text.toString())
             dialog.dismiss()
         }
         btnCancel.setOnClickListener {

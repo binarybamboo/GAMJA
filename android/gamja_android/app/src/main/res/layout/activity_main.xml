@@ -33,7 +33,7 @@
                 android:layout_width="160dp"
                 android:layout_height="80dp"
                 android:fontFamily="@font/font_style"
-                android:text="@{vm.userName+@string/main_text}" />
+                android:text="@{vm.userName" />
 
             <Button
                 android:id="@+id/setting_btn"

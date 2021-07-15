@@ -6,6 +6,9 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gamja.utils.UserApi
 import com.example.gamja.databinding.ActivityLoginBinding
+import com.example.gamja.retrofit.RetrofitLoginManager
+import com.example.gamja.retrofit.RetrofitLoginManager.Companion.instance
+import com.example.gamja.utils.RESPONSE_STATE
 import com.kakao.sdk.user.UserApiClient
 
 
@@ -51,6 +54,22 @@ class LoginActivity : AppCompatActivity() {
                         "\n이메일: ${user.kakaoAccount?.email}" +
                         "\n닉네임: ${user.kakaoAccount?.profile?.nickname}" +
                         "\n프로필사진: ${user.kakaoAccount?.profile?.thumbnailImageUrl}")
+                RetrofitLoginManager.instance.sendEmail(
+                    email = user.kakaoAccount?.email,
+                    completion = { responseState, responseBody ->
+                        when (responseState) {
+                            RESPONSE_STATE.FAIL -> {
+                                Log.d("TAG", "로그인 post응답 실패 $responseBody")
+                            }
+                            RESPONSE_STATE.OK -> {
+                                Log.d("TAG", "로그인 post응답 성공 $responseBody")
+                                val accessToken= responseBody?.accessToken
+                                val refreshToken= responseBody?.refreshToken
+                                Log.d("TAG", "accessToken $accessToken refreshToken $refreshToken")
+                                UserApi().saveToken(this,refreshToken!!,accessToken!!)
+                            }
+                        }
+                    })
             }
         }
         //이름이 없다면 이름설정창으로
