@@ -46,7 +46,7 @@ const createDiary = async req => {
 };
 
 const getDiary = async req => {
-  const { diaryGroupId } = req.params;
+  const { diaryGroupId } = req.query;
   const diary = await diaryGroupService.printAll(diaryGroupId);
   return diary;
 };

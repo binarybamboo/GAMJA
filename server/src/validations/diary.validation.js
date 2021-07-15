@@ -10,7 +10,7 @@ const createDiary = {
 };
 
 const getDiary = {
-  params: Joi.object().keys({
+  query: Joi.object().keys({
     diaryGroupId: Joi.required().custom(objectId),
   }),
 };
