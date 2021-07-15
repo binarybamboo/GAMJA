@@ -11,8 +11,10 @@
         android:label="감자"
         android:roundIcon="@drawable/gamja_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".view.DetailDiaryActivity"></activity>
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".view.AddSubDiaryActivity"></activity>
+        <activity android:name=".view.DetailDiaryActivity" />
         <activity android:name=".view.SubDiaryActivity" />
         <activity
             android:name=".view.UserNameActivity"

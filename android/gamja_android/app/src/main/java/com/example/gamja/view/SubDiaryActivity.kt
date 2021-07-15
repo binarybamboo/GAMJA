@@ -57,4 +57,7 @@ class SubDiaryActivity : AppCompatActivity() {
 
         })
     }
+    fun goToaddSubDiary(){
+        startActivity(Intent(this, AddSubDiaryActivity::class.java))
+    }
 }

@@ -1,0 +1,27 @@
+package com.example.gamja.retrofit
+
+import com.example.gamja.model.Diary
+import com.example.gamja.model.PostDiary
+import com.example.gamja.utils.MyApi
+import com.example.gamja.utils.UserApi
+import com.google.gson.JsonElement
+import com.google.gson.JsonObject
+import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Response
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.Header
+import retrofit2.http.POST
+
+interface RetrofitService {
+    @POST("auth/login")
+    fun sendEmail(@Body email:HashMap<String, Any>): Call<JsonElement>
+
+
+    @POST("diary-group")
+   suspend fun addDiaryGroup(@Header("Authorization") accessToken:String , @Body postDiary:HashMap<String, Any>): Response<Diary>
+
+    @GET("diary-group")
+    suspend fun getDiaryGroup(@Header("Authorization") accessToken:String):Response<List<Diary>>
+}

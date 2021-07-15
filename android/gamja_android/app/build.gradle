@@ -61,4 +61,21 @@ dependencies {
     //카드뷰
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation "androidx.recyclerview:recyclerview:1.2.1"//리사이클러뷰
+    //retrofit
+    def retrofit_version="2.8.1"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    //gson컨버터
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    //레트로핏 로깅 인터셉터
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
+    //Okhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+    //뷰페이저
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    //
+    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    //Lifecycle ktx
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
 }

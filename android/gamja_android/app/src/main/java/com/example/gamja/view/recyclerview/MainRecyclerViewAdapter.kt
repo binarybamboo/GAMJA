@@ -1,20 +1,18 @@
 package com.example.gamja.view.recyclerview
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamja.R
 import com.example.gamja.model.Diary
-import com.example.gamja.view.SubDiaryActivity
 
 class MainRecyclerViewAdapter(private val context: Context): RecyclerView.Adapter<MainRecyclerViewAdapter.ViewHolder>() {
-    var datas = mutableListOf<Diary>()
+    var datas = ArrayList<Diary>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.diary_list,parent,false)
         return ViewHolder(view)
@@ -23,7 +21,7 @@ class MainRecyclerViewAdapter(private val context: Context): RecyclerView.Adapte
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(datas[position])
         holder.diaryImg.setOnClickListener{
-            itemClickListener.onClick(it,position,datas[position].title)
+            itemClickListener.onClick(it,position,datas[position].name)
         }
     }
     // (2) 리스너 인터페이스
@@ -41,7 +39,8 @@ class MainRecyclerViewAdapter(private val context: Context): RecyclerView.Adapte
         val diaryTitle: TextView = itemView.findViewById(R.id.diary_item_title)
         val diaryImg: ImageView = itemView.findViewById(R.id.diary_img)
         fun bind(item: Diary) {
-            diaryTitle.text = item.title
+            diaryTitle.text = item.name
+
         }
     }
 
