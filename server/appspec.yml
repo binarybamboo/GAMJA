@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/server/ #S3에서 가지고온 파일을 저장할 폴더
+hooks:
+  BeforeInstall:
+    - location: pre-execute.sh
+      runas: ubuntu
+  AfterInstall: #배포 후 실행할 명령
+    - location: execute-deploy.sh
+      runas: ubuntu
